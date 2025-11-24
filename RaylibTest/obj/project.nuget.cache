@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "tWF9gtMPXEw=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\emilia.levinsen\\Documents\\Spets\\Grafik\\RaylibTest\\RaylibTest\\RaylibTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\emilia.levinsen\\.nuget\\packages\\raylib-cs\\7.0.2\\raylib-cs.7.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
