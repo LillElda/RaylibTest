@@ -26,3 +26,4 @@ C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\
 C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\pixil-frame-3.png
 C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\pixil-frame-4.png
 C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\pixil-frame-0.png
+C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\pixilart-sprite (1).png
