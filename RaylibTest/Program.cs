@@ -25,7 +25,6 @@ while (!Raylib.WindowShouldClose())
 class Game
 {
     public Rat rat = new Rat();
-    Vector2 _posrat = new(0, 0);
     public class Rat
     {
 
@@ -40,7 +39,7 @@ class Game
         private bool _rat_is_right = true;
 
         const float _gravity = 0.4f;
-        const float _jump_force = -10f;
+        const float _jump_force = -15f;
         const float _floor_Y = 600f;
         public Rat()
         {

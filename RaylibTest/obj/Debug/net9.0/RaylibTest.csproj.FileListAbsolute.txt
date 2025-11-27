@@ -20,10 +20,5 @@ C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\obj\Debug\
 C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\obj\Debug\net9.0\RaylibTest.pdb
 C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\obj\Debug\net9.0\RaylibTest.genruntimeconfig.cache
 C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\obj\Debug\net9.0\ref\RaylibTest.dll
-C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\Gosigrattarealreal.png
-C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\pixil-frame-1.png
-C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\pixil-frame-2.png
-C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\pixil-frame-3.png
-C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\pixil-frame-4.png
-C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\pixil-frame-0.png
 C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\pixilart-sprite (1).png
+C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\pixilart-sprite-cat (1).png
