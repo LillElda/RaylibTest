@@ -24,12 +24,12 @@ while (!Raylib.WindowShouldClose())
 
 class Game
 {
-    public Rat rat = new Rat();
-    public class Rat
+    public Character rat = new Character("pixilart-sprite (1).png");
+    //public Character cat = new Character("pixilart-sprite-cat (1).png");
+    // MAKE THIS WORK
+}
+ public class Character
     {
-
-        public Animation _walk = new("pixilart-sprite (1).png", 32);
-
         private int _health;
         private Vector2 _pos = new(0, 0);
         private Vector2 _move = new(0, 0);
@@ -37,12 +37,14 @@ class Game
         private bool _onGround = false;
         private int _slowframe = 0;
         private bool _rat_is_right = true;
-
+        private Animation _walk;
+    
         const float _gravity = 0.4f;
         const float _jump_force = -15f;
         const float _floor_Y = 600f;
-        public Rat()
+        public Character(string sprite)
         {
+            _walk = new Animation(sprite, 32);
         }
         private void Gravity()
         {
@@ -68,7 +70,7 @@ class Game
         }
         public Vector2 Move()
         {
-
+        
             _move = Vector2.Zero;
             if (Raylib.IsKeyDown(KeyboardKey.Right))
             {
@@ -84,10 +86,10 @@ class Game
             }
             Gravity();
             Jump();
-
+    
             _pos += _move;
             _pos.Y += _velY;
-
+    
             if (_move.Length() != 0)
                 _move = Vector2.Normalize(_move);
             return _pos;
@@ -106,8 +108,6 @@ class Game
             }
         }
     }
-}
-
 class Animation
 {
     Texture2D _spritesheet;
@@ -142,3 +142,4 @@ class Animation
         else Raylib.DrawTexturePro(_spritesheet, srcflip, dst, Vector2.Zero, 0, Color.White);
     }
 }
+
