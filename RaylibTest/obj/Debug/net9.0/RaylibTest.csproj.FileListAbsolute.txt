@@ -22,3 +22,7 @@ C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\obj\Debug\
 C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\obj\Debug\net9.0\ref\RaylibTest.dll
 C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\pixilart-sprite (1).png
 C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\pixilart-sprite-cat (1).png
+C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\RatIdle.png
+C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\RatJump.png
+C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\backgroundStart -spritesheet.png
+C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\Background2.png
