@@ -36,29 +36,26 @@ class Game
 
     public Rat rat = new Rat("", new(0, 0));
     public Cat cat = new Cat("", new(800, 600));
-    public Objects background1 = new Objects("backgroundStart -spritesheet.png", new(0, 0), new(1200, 1000));
-    public Objects background2 = new Objects("background2.png", new(0, 0), new(1200, 1000));
-    public Cat_quest1 quest1 = new();
-    public Objects currentbackground;
-    public Game(){
-        currentbackground = background1;
+    
+    public World_events events;
+    public Game()
+    {
+        events = new World_events(rat, cat); //change so that when rat imported we need rats pos and move collition to world events.
     }
+
 
 
     public void Update()
     {
-        currentbackground.Draw();
+        events.currentbackground.Draw();
         rat.Draw();
-        if(currentbackground == background1)cat.Draw();
-        if (Raylib.CheckCollisionRecs(rat.rect, cat.rect)&&currentbackground == background1)
-        {
-            quest1.Textloop();
-            quest1.Draw();
-            //System.Console.WriteLine("KOLLISION"); //If this happends, make press space avalible, to start quest.
-        }
-        string answer = rat.Check_moving_screen();
-        if (answer == "right" && currentbackground == background1)currentbackground = background2; 
-        else if(answer == "left" && currentbackground == background2)currentbackground = background1;
+        if (events.currentbackground == events.background1) cat.Draw();
+
+        events.Rat_move_screen();
+        events.Check_collition();
+
+
+
         //background.Draw();
     }
 

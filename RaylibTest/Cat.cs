@@ -40,7 +40,6 @@ class Cat_quest1 : Quests
             displayedText = dialogueLines[currentLine];
             currentLine++;
         } 
-        displayedText = dialogueLines[currentLine];
     }
 }
 

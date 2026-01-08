@@ -5,10 +5,13 @@ class Rat : CanMove
     string _sprite_idle = "RatIdle.png";
     string _sprite_walk = "pixilart-sprite (1).png";
     string _sprite_jump = "RATJump.png";
+    string _sprite_fall = "ratfalling.png";
     Vector2 _move = new(0, 0);
     private Animation _walk;
     private Animation _jump;
+    private One_Animation _fall;
     const float _jump_force = -15f;
+    const float _falling_force = 15f;
     private float _speed = 5f;
 
      // Size pic vs real life, when in wrong pos
@@ -17,6 +20,7 @@ class Rat : CanMove
         _idle = new Animation(_sprite_idle, 32);
         _walk = new Animation(_sprite_walk, 32);
         _jump = new Animation(_sprite_jump, 32);
+        _fall = new One_Animation(_sprite_fall, 32);
         rect.Height = 90; //How much size it should be
         rect.Width = 320 - 30;
         offset = new(-10, -210); //How much should be moved
@@ -46,26 +50,19 @@ class Rat : CanMove
 
         }
     }
-    public string Check_moving_screen()
+    private void Fall()
     {
-        if (rect.X > 1200)
-        {
-            rect.X = 0;
-            return "right";
-        }
-        else if (rect.X < 0)
-        {
-            rect.X = 1190;
-            return "left";
-        }  
-        else{ return "none"; }
-        
+        _velY = _falling_force;
+        _onGround = false;
+        _currentAnimation = _fall;
     }
+   
     public void Move()
     {
         Sidemovement();
         Gravity();
         Jump();
+        Fall();
 
         rect.Position += _move;
         rect.Y += _velY;

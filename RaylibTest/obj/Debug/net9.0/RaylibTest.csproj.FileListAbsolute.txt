@@ -26,3 +26,6 @@ C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\
 C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\RatJump.png
 C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\backgroundStart -spritesheet.png
 C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\Background2.png
+C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\BackgroundRacoon.png
+C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\BackgroundStup.png
+C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\ratfalling.png

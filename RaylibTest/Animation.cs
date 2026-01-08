@@ -3,9 +3,9 @@ using System.Numerics;
 class Animation
 {
     Texture2D _spritesheet;
-    int _currentframe = 0;
+    protected int _currentframe = 0;
     int _width;
-    int _totalframes;
+    protected int _totalframes;
     private int _slowframe = 0;
 
     float _scale = 10;
@@ -17,7 +17,7 @@ class Animation
         _totalframes = _spritesheet.Width / _width;
     }
 
-    public void NextFrame()
+    public virtual void NextFrame()
     {
         _currentframe++;
         if (_currentframe == _totalframes)
@@ -42,6 +42,20 @@ class Animation
             NextFrame();
             if (_slowframe >= 500) _slowframe = 0;
         }
+    }
+}
+class One_Animation : Animation
+{
+    public One_Animation(string spritesheet, int width) : base(spritesheet, width)
+    {
+    }
+    public override void NextFrame()
+    {
+       _currentframe++;
+        if (_currentframe == _totalframes)
+        {
+            _currentframe --;
+        } 
     }
 }
 
