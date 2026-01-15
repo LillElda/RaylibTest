@@ -49,17 +49,22 @@ class World_events
     public Objects background2 = new Objects("background2.png", new(0, 0), new(1200, 1000));
     public Objects background3 = new Objects("BackgroundRacoon.png", new(0, 0), new(1200, 1000));
     public Objects background4 = new Objects("BackgroundStup.png", new(0, 0), new(1200, 1000));
+    public Objects background5 = new Objects("Backgroundnedanförstup.png", new(0,0), new(1200,1000));
     public Objects currentbackground;
     public Cat_quest1 quest1 = new();
+    public Goal_Quest goal = new();
     Rat _rat;
     Cat _cat;
+    Kunglig _logubbe;
 
 
-    public World_events(Rat rat, Cat cat)
+    public World_events(Rat rat, Cat cat, Kunglig logubbe)
     {
 
         _rat = rat;
         _cat = cat;
+        _logubbe = logubbe;
+
         currentbackground = background1; /// IF TESTING CHANGE BG TO JUMP IN STORY
     }
     public void Rat_move_screen()
@@ -73,10 +78,11 @@ class World_events
 
         }
         // If rat moves left out of screen
-        else if (_rat.rect.X < 0)
+        else if (_rat.rect.X < -10)
         {
-            _rat.rect.X = 1190;
-            if (currentbackground == background2) { currentbackground = background1; }
+            _rat.rect.X = -9;
+            if (currentbackground == background2) { currentbackground = background1; _rat.rect.X = 1190; }
+            else if (currentbackground == background4) { currentbackground = background2; _rat.rect.X = 1190; }
         }
         ////////////////For scene 3 only:
         if (currentbackground == background2 && _rat.rect.X > 680 && _rat.rect.X < 850)
@@ -94,16 +100,20 @@ class World_events
             if (Raylib.IsKeyPressed(KeyboardKey.Space)) { currentbackground = background2; }
         }
         /// /////////For scene 4 only:
-        if (currentbackground == background4 && _rat.rect.X > 780)
+        if (currentbackground == background4 && _rat.rect.X > 780 && _rat.rect.Y > 701)
         {
-            Console.WriteLine("Noo my guy he is falling");
+            Console.WriteLine("falling");
+            _rat.Fall();
+            currentbackground = background5;
+            _rat.rect.X = 100;
         }
+        if (currentbackground == background5)
+        {
+            if (_rat.rect.X < 100) { _rat.rect.X = 100; }
+        }
+            else if (_rat.rect.X > 1200) { _rat.rect.X = 1199; }
     }
-    /// <summary>
-    
-    
-    /// </summary>
-    ////////////////////////////////////End of weird loop check.
+
     public void Check_collition()
     {
         if (currentbackground == background1)
@@ -114,8 +124,14 @@ class World_events
                 quest1.Draw();
             }
         }
+        else if (currentbackground == background5)
+        {
+            if (Raylib.CheckCollisionRecs(_rat.rect, _cat.rect))
+            {
+                goal.Textloop();
+                goal.Draw();
+            }
+        }
+        
     }
 }
-
-
-

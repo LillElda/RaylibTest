@@ -49,18 +49,22 @@ class CanMove : Character
     }
     protected void Gravity()
     {
+        _velY += _gravity;
+        _onGround = false;
+    }
+
+    protected bool Normalize_gravity()
+    {
         if (rect.Y >= _floor_Y)
         {
             rect.Y = _floor_Y;
             _velY = 0;
             _onGround = true;
+            return true;
         }
-        else
-        {
-            _velY += _gravity;
-            _onGround = false;
-        }
+        return false;
     }
+
 }
 interface DoSomeThing
 {

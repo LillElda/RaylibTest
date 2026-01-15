@@ -6,12 +6,12 @@ class Rat : CanMove
     string _sprite_walk = "pixilart-sprite (1).png";
     string _sprite_jump = "RATJump.png";
     string _sprite_fall = "ratfalling.png";
+    bool falling_scene4 = false;
     Vector2 _move = new(0, 0);
     private Animation _walk;
     private Animation _jump;
     private One_Animation _fall;
     const float _jump_force = -15f;
-    const float _falling_force = 15f;
     private float _speed = 5f;
 
      // Size pic vs real life, when in wrong pos
@@ -47,22 +47,25 @@ class Rat : CanMove
             _velY = _jump_force;
             _onGround = false;
             _currentAnimation = _jump;
-
         }
     }
-    private void Fall()
+    public void Fall()
     {
-        _velY = _falling_force;
-        _onGround = false;
-        _currentAnimation = _fall;
+        bool falling_scene4 = true; //i need this to trigger somehow, does not seem to work from world.
+        Gravity();
     }
    
     public void Move()
     {
         Sidemovement();
-        Gravity();
+        if (!falling_scene4)
+        {
+            if (!Normalize_gravity()) Gravity();
+        }
+        else{ Gravity(); }
+        
         Jump();
-        Fall();
+        //Fall does not work pls fix.
 
         rect.Position += _move;
         rect.Y += _velY;

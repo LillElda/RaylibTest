@@ -36,11 +36,12 @@ class Game
 
     public Rat rat = new Rat("", new(0, 0));
     public Cat cat = new Cat("", new(800, 600));
+    public Kunglig logubbe = new Kunglig("", new(1000, 600));
     
     public World_events events;
     public Game()
     {
-        events = new World_events(rat, cat); //change so that when rat imported we need rats pos and move collition to world events.
+        events = new World_events(rat, cat, logubbe); //change so that when rat imported we need rats pos and move collition to world events.
     }
 
 
@@ -50,6 +51,7 @@ class Game
         events.currentbackground.Draw();
         rat.Draw();
         if (events.currentbackground == events.background1) cat.Draw();
+        if (events.currentbackground == events.background5) logubbe.Draw();
 
         events.Rat_move_screen();
         events.Check_collition();

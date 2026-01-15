@@ -29,3 +29,6 @@ C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\
 C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\BackgroundRacoon.png
 C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\BackgroundStup.png
 C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\ratfalling.png
+C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\obj\Debug\net9.0\RaylibTest.sourcelink.json
+C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\Backgroundnedanförstup.png
+C:\Users\emilia.levinsen\Documents\Spets\Grafik\RaylibTest\RaylibTest\bin\Debug\net9.0\LoGubbeKunglig.png
